@@ -23,7 +23,9 @@ router.post(
 
        newAdvisor.save(function(err){
        	 if(err){
-       	 	return next({status:400});
+       	 	  const error = new Error('An error occurred.');
+
+            return next(error);
        	 }  
        });
     res.json();

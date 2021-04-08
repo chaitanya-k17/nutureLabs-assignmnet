@@ -145,9 +145,7 @@ router.post(
         }    
     })
 
-    res.json({
-
-    });
+    res.json();
 
   });
 

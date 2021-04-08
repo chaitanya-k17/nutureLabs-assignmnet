@@ -32,14 +32,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/user', route);
 app.use('/admin', routeAdvisor);
 
-
-
 // Handle errors.
 app.use(function(err, req, res, next) {
   res.status(err.status || 404);
   res.json({ error: err });
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log('-------------------Wellcome NurtureLabs..... Server starts ----------')
 });
